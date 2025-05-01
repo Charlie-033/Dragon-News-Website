@@ -16,7 +16,7 @@ const RootLayout = () => {
                     <Navbar/>
                 </nav>
             </header>
-            <main className='mt-12 grid grid-cols-12'>
+            <main className='mt-12 grid grid-cols-12 gap-3'>
                 <aside className='col-span-3 text-center'>
                     <LeftAside/>
                 </aside>
