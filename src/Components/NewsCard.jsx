@@ -2,9 +2,11 @@ import { format } from 'date-fns';
 import React from 'react';
 import { FaEye, FaShareAlt, FaStar } from 'react-icons/fa';
 import { MdBookmarkBorder } from 'react-icons/md';
+import { Link } from 'react-router';
 
 const NewsCard = ({news}) => {
     const {
+        id,
         title,
         rating,
         total_view,
@@ -49,9 +51,9 @@ const NewsCard = ({news}) => {
               {details.length > 150 ? (
                 <>
                   {details.slice(0, 150)}...{" "}
-                  <span className="text-blue-500 font-medium cursor-pointer">
+                  <Link to={`/news-details/${id}`} className="text-blue-500 font-medium cursor-pointer">
                     Read More
-                  </span>
+                  </Link>
                 </>
               ) : (
                 details
